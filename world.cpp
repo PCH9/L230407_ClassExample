@@ -16,6 +16,8 @@ void UWorld::Move()
 
 void UWorld::SpawnActor(AActor* NewActor)
 {
-	for()
-	Actors.push_back(NewActor);
+	if (NewActor != nullptr)
+	{
+		Actors.push_back(NewActor);
+	}
 }

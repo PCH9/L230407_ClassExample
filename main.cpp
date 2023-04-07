@@ -17,6 +17,8 @@ int main()
 	World->SpawnActor(new APlayer());
 	World->SpawnActor(new AMonster());
 	World->SpawnActor(new AGoal());
+
+	delete World;
 	
 
 	return 0;

@@ -6,6 +6,7 @@
 #include "Wall.h"
 #include "World.h"
 #include "Actor.h"
+#include "Goal.h"
 #include <vector>
 
 using namespace std;

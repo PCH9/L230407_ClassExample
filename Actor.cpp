@@ -2,6 +2,8 @@
 #include <windows.h>
 #include <iostream>
 
+using namespace std;
+
 AActor::AActor()
 {
 	X = 1;
@@ -30,4 +32,10 @@ void AActor::Tick()
 
 void AActor::Render()
 {
+	COORD Pos;
+	Pos.X = X;
+	Pos.Y = Y;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), Pos);
+
+	cout << Shape << endl;
 }

@@ -19,7 +19,7 @@ int main()
 	Engine->Init();
 	Engine->Run();
 
-
+	delete Engine;
 
 	return 0;
 }

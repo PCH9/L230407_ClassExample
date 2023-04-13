@@ -9,6 +9,7 @@
 #include "Monster.h"
 
 #include <iostream>
+#include <algorithm>
 
 
 GameEngine::GameEngine()
@@ -55,16 +56,19 @@ void GameEngine::Load(std::string FileName)
 		else if (c == 'P')
 		{
 			GetWorld()->SpawnActor(new APlayer(PositionX, PositionY));
+			GetWorld()->SpawnActor(new AFloor(PositionX, PositionY));
 			//printf("플레이어");
 		}
 		else if (c == 'G')
 		{
 			GetWorld()->SpawnActor(new AGoal(PositionX, PositionY));
+			GetWorld()->SpawnActor(new AFloor(PositionX, PositionY));
 			//printf("목표");
 		}
 		else if (c == 'M')
 		{
 			GetWorld()->SpawnActor(new AMonster(PositionX, PositionY));
+			GetWorld()->SpawnActor(new AFloor(PositionX, PositionY));
 			//printf("몬스터");
 		}
 		else if (c == '\n')
@@ -79,6 +83,8 @@ void GameEngine::Load(std::string FileName)
 	}
 
 	fclose(file);
+
+	GetWorld()->Sort();
 }
 
 void GameEngine::Run()

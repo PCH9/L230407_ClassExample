@@ -1,26 +1,25 @@
 #include <iostream>
-#include <ctime>
-#include "Floor.h"
-#include "Monster.h"
-#include "Player.h"
-#include "Wall.h"
-#include "World.h"
-#include "Actor.h"
-#include "Goal.h"
+#include "MyGameEngine.h"
 #include <vector>
 
 using namespace std;
 
 int main()
 {
-	UWorld* World = new UWorld();
-
-	World->SpawnActor(new APlayer());
-	World->SpawnActor(new AMonster());
-	World->SpawnActor(new AGoal());
-
-	delete World;
 	
+
+	////GameEngine
+	//UWorld* World = new UWorld();
+
+	//// Lord
+	//World->SpawnActor(new APlayer());
+	//World->SpawnActor(new AGoal());
+	MyGameEngine* Engine = new MyGameEngine();
+
+	Engine->Init();
+	Engine->Run();
+
+
 
 	return 0;
 }

@@ -14,6 +14,10 @@ public:
 
 	void SpawnActor(AActor* NewActor);
 
+	virtual void Input();
+	virtual void Tick();
+	virtual void Render();
+
 protected:
 	std::vector<AActor*> Actors;
 

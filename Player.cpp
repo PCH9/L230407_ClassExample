@@ -3,6 +3,12 @@
 
 APlayer::APlayer()
 {
+	
+}
+
+APlayer::APlayer(int NewX, int NewY, int NewShape)
+	:AActor(NewX, NewY, NewShape)
+{
 }
 
 APlayer::~APlayer()

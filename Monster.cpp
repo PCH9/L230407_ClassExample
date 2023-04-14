@@ -3,6 +3,9 @@
 
 AMonster::AMonster()
 {
+	R = 255;
+	G = 255;
+	B = 0;
 }
 
 AMonster::AMonster(int NewX, int NewY, char NewShape)
@@ -10,6 +13,9 @@ AMonster::AMonster(int NewX, int NewY, char NewShape)
 {
 	SortOrder = 4;
 
+	R = 255;
+	G = 255;
+	B = 0;
 }
 
 AMonster::~AMonster()

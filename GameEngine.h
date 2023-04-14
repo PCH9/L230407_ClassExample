@@ -21,7 +21,7 @@ protected:
 	void Tick();
 	void Render();
 
-	bool blsRunning = true;
+	bool bIsRunning = true;
 
 	class UWorld* World;
 };

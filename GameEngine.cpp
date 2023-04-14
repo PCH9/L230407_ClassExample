@@ -15,7 +15,7 @@
 GameEngine::GameEngine()
 {
 	World = nullptr;
-	blsRunning = true;
+	bIsRunning = true;
 	KeyCode = 0;
 }
 
@@ -90,7 +90,7 @@ void GameEngine::LoadLevel(std::string FileName)
 
 void GameEngine::Run()
 {
-	while (blsRunning) // Frame
+	while (bIsRunning) // Frame
 	{
 		//system("cls");
 		Input();

@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "MyGameEngine.h"
 #include <iostream>
 
 APlayer::APlayer()
@@ -6,7 +7,7 @@ APlayer::APlayer()
 	Shape = 'P';
 	X = 2;
 	Y = 2;
-	
+
 }
 
 APlayer::APlayer(int NewX, int NewY, int NewShape)
@@ -17,4 +18,26 @@ APlayer::APlayer(int NewX, int NewY, int NewShape)
 
 APlayer::~APlayer()
 {
+}
+
+void APlayer::Tick()
+{
+	switch (GEngine->KeyCode)
+	{
+		case 'w':
+			Y--;
+			break;
+		case 's':
+			Y++;
+			break;
+		case 'a':
+			X--;
+			break;
+		case 'd':
+			X++;
+			break;
+		case 'q':
+			GEngine->Stop();
+			break;
+	}
 }

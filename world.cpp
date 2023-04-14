@@ -15,10 +15,6 @@ UWorld::~UWorld()
 	}
 }
 
-void UWorld::Move()
-{
-}
-
 void UWorld::SpawnActor(AActor* NewActor)
 {
 	if (NewActor != nullptr)
@@ -27,13 +23,13 @@ void UWorld::SpawnActor(AActor* NewActor)
 	}
 }
 
-void UWorld::Input()
-{
-	for (auto ProcessActor : Actors)
-	{
-		ProcessActor->Input();
-	}
-}
+//void UWorld::Input()
+//{
+//	for (auto ProcessActor : Actors)
+//	{
+//		ProcessActor->Input();
+//	}
+//}
 
 void UWorld::Tick()
 {
@@ -53,6 +49,5 @@ void UWorld::Render()
 
 void UWorld::Sort()
 {
-	
 	std::sort(Actors.begin(), Actors.end(), AActor::Compare);
 }

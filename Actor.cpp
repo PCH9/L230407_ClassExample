@@ -22,9 +22,9 @@ AActor::~AActor()
 {
 }
 
-void AActor::Input()
-{
-}
+//void AActor::Input()
+//{
+//}
 
 void AActor::Tick()
 {

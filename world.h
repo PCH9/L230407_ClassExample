@@ -9,12 +9,9 @@ public:
 	UWorld();
 	virtual ~UWorld();
 
-	virtual void Move();
-
-
 	void SpawnActor(AActor* NewActor);
 
-	virtual void Input();
+	//virtual void Input();
 	virtual void Tick();
 	virtual void Render();
 

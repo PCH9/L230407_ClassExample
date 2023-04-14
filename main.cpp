@@ -14,12 +14,18 @@ int main()
 	//// Lord
 	//World->SpawnActor(new APlayer());
 	//World->SpawnActor(new AGoal());
-	MyGameEngine* Engine = new MyGameEngine();
 
-	Engine->Init();
-	Engine->Run();
+	MyGameEngine* Engine = GEngine;
+	//MyGameEngine* Engine = MyGameEngine::GetEngine();
 
-	delete Engine;
+
+	GEngine->Init();
+	GEngine->Run();
+	//Engine->Init();
+	//Engine->Run();
+
+	delete GEngine;
+	//delete Engine;
 
 	return 0;
 }

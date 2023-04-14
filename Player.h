@@ -7,9 +7,9 @@ public:
 	APlayer();
 	APlayer(int NewX, int NewY, int NewShape = 'P');
 
-	virtual ~APlayer();
+	virtual void Tick() override;
 	
-
+	virtual ~APlayer();
 
 };
 

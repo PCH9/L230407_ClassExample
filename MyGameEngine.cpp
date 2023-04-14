@@ -6,6 +6,8 @@
 #include "Wall.h"
 #include "World.h"
 
+MyGameEngine* MyGameEngine::Instance = nullptr;
+
 MyGameEngine::MyGameEngine()
 {
 }
@@ -20,6 +22,6 @@ void MyGameEngine::Init()
 	GameEngine::Init();
 
 	//Map Lord
-	Load("Level1.dat");
+	LoadLevel("Level1.dat");
 
 }

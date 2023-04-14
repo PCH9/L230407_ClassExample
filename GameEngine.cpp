@@ -10,12 +10,13 @@
 
 #include <iostream>
 #include <algorithm>
-
+#include <conio.h>
 
 GameEngine::GameEngine()
 {
 	World = nullptr;
 	blsRunning = true;
+	KeyCode = 0;
 }
 
 GameEngine::~GameEngine()
@@ -32,7 +33,7 @@ void GameEngine::Init()
 	World = new UWorld();
 }
 
-void GameEngine::Load(std::string FileName)
+void GameEngine::LoadLevel(std::string FileName)
 {
 	FILE* file;
 	char c;
@@ -45,7 +46,7 @@ void GameEngine::Load(std::string FileName)
 		if (c == '*')
 		{
 			GetWorld()->SpawnActor(new AWall(PositionX, PositionY));
-			//GetWorld()->SpawnActor(new AFloor(PositionX, PositionY));
+			GetWorld()->SpawnActor(new AFloor(PositionX, PositionY));
 			//printf("º®");
 		}
 		else if (c == ' ')
@@ -100,11 +101,13 @@ void GameEngine::Run()
 
 void GameEngine::Stop()
 {
+	bIsRunning = false;
 }
 
 void GameEngine::Input()
 {
-	World->Input();
+	KeyCode = _getch();
+	//World->Input();
 }
 
 void GameEngine::Tick()

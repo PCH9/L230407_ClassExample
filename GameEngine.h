@@ -8,11 +8,13 @@ public:
 	virtual ~GameEngine();
 
 	virtual void Init();
-	virtual void Load(std::string FileName);
+	virtual void LoadLevel(std::string FileName);
 	void Run();
 	void Stop();
 
 	inline class UWorld* GetWorld() const { return World; }
+
+	int KeyCode;
 
 protected:
 	void Input();
